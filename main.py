@@ -1,7 +1,12 @@
 import tkinter as tk
 import nltk
 from textblob import TextBlob
-from newspaper import article
+from newspaper import Article
 
 url = 'https://kurier.at/politik/inland/lockdown-nummer-drei-das-zerrt-jetzt-echt-an-den-nerven/401135265'
+article = Article(url)
 
+article.download()
+article.parse()
+
+article.nlp()
